@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Write a type-annotated function to_kv that takes a string k
-and an int OR float v as arguments and returns a tuple.The first
-element of the tuple is the string k. The second element is the
-square of the int/float v and should be annotated as a float.
-"""
+"""Module contains function that converts Python var to a Key-value pair."""
 
-import typing
+from typing import Union, Tuple
+
+
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
+    """Converts a Python variable to a KV pair."""
+    return k, v ** 2
